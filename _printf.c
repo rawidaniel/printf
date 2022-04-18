@@ -43,12 +43,16 @@ int formatchecker(const char *str, va_list valist, int *j)
 	int formats;
 
 	Data checker[] = {{'c', print_char},
-			{'s', print_string},
-			{'d', print_integer}};
+			{'s', print_string}};
 	*j = *j + 1;
 	if (str[*j] == '\0')
 	{
 		return (-1);
+	}
+	if (str[*j] == '%')
+	{
+		print_out('%');
+		return (1);
 	}
 	formats = sizeof(checker) / sizeof(checker[0]);
 	for (i = 0; i < formats; i++)
@@ -56,9 +60,10 @@ int formatchecker(const char *str, va_list valist, int *j)
 		if (str[*j] == checker[i].l)
 		{
 			p = checker[i].ptr(valist);
-			break;
+			return (p);
 		}
 	}
+	print_out('%'), print_out(str[*j]);
 	return (p);
 }
 
