@@ -12,7 +12,8 @@ int print_string(va_list valist)
 unsigned int count;
 	char *str = va_arg(valist, char *);
 
-
+	if (str == NULL)
+		str = "(null)";
 	for (count = 0; str[count]; count++)
 	{
 		print_out(str[count]);
