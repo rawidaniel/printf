@@ -43,8 +43,7 @@ int formatchecker(const char *str, va_list valist, int *j)
 	int formats;
 
 	Data checker[] = {{'c', print_char},
-			{'s', print_string},
-			{'d', print_integer}};
+			{'s', print_string}};
 	*j = *j + 1;
 	if (str[*j] == '\0')
 	{
