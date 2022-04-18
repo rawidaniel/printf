@@ -63,7 +63,7 @@ int print_int(va_list valist)
 
 	num = va_arg(valist, int);
 	count = digit_count(num);
-	if (num <= 0)
+	if (num < 0)
 		num++;
 	print_number(num);
 	return (count);
