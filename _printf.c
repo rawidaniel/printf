@@ -64,7 +64,7 @@ int formatchecker(const char *str, va_list valist, int *j)
 		}
 	}
 	print_out('%'), print_out(str[*j]);
-	return (p);
+	return (2);
 }
 
 /**
