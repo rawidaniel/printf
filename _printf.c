@@ -21,7 +21,7 @@ int print_format(const char *format, va_list valist)
 				return (-1);
 			}
 		count += result;
-		i += 1;
+		continue;
 		}
 	print_out(format[i]);
 	count++;
