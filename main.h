@@ -7,8 +7,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-int print_format(const char *format,va_list valist);
-int formatchecker(const char *str,va_list valist , int *j);
+int print_format(const char *format, va_list valist);
+int formatchecker(const char *str, va_list valist, int *j);
 int print_out(char c);
 int _printf(const char *format, ...);
 int print_char(va_list valist);
