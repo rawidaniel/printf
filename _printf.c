@@ -42,9 +42,9 @@ int formatchecker(const char *str, va_list valist, int *j)
 	int p;
 	int formats;
 
-	Data checker[] = {{'c', print_char},
-			{'s', print_string},
-			{'d', print_int}, {'i', print_int}};
+	Data checker[] = {{'c', print_char}, {'s', print_string},
+			{'d', print_int}, {'i', print_int},
+			{'b', print_binary}};
 	*j = *j + 1;
 	if (str[*j] == '\0')
 	{

@@ -18,6 +18,8 @@ int print_string(va_list valist);
 /* print integer */
 int print_int(va_list valist);
 char *itoa(long int num, int base, int lowercase);
+/* print base*/
+int print_binary(va_list valist);
 /* print string */
 int _puts(char *str);
 /**
