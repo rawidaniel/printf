@@ -24,7 +24,6 @@ int print_rot13(va_list valist)
 				if (str[i] == rot13[j])
 				{
 					print_out(ROT13[j]);
-					break;
 				}
 			}
 		}
