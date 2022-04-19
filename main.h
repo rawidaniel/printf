@@ -17,8 +17,7 @@ int print_char(va_list valist);
 int print_string(va_list valist);
 /* print integer */
 int print_int(va_list valist);
-void print_number(int n);
-int number_count(int n);
+char *itoa(long int num, int base, int lowercase);
 /* print string */
 int _puts(char *str);
 /**
