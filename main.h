@@ -33,6 +33,8 @@ int print_hex(va_list l);
 int print_hex_big(va_list l);
 /*print non printable characters*/
 int print_bigS(va_list l);
+/* get_sign - turns on flags if _printf finds */
+int get_sign(char s, sign_t *f);
 
 /**
  * struct format - a struct of format
@@ -45,6 +47,22 @@ typedef struct format
 	char l;
 	int (*ptr)(va_list);
 } Data;
+
+
+/**
+ * struct sign - struct containing flags to "turn on"
+ * when a flag specifier is passed to _printf()
+ * @plus: flag fpr the '+' character
+ * @space:flag for the ' 'character
+ * @hash: flag for the '#' character
+ */
+
+typedef struct sign
+{
+	int plus;
+	int space;
+	int hash;
+} sign_t;
 
 
 #endif
