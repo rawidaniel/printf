@@ -11,6 +11,10 @@ int print_rot13(va_list valist)
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *str = va_arg(valist, char *);
 
+	if (str == NULL)
+	{
+		return (_puts("(nil)"));
+	}
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] < 'A' || str[i] > 'z' || (str[i] < 'a' && str[i] > 'Z'))
