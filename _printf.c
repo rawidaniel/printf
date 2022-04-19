@@ -52,7 +52,8 @@ int formatchecker(const char *str, va_list valist, int *j)
 			  {'x', print_hex},
 			  {'X', print_hex_big},
 			  {'S', print_bigS},
-			  {'p', print_address}};
+			  {'p', print_address},
+			  {'R', print_rot13}};
 	*j = *j + 1;
 	if (str[*j] == '\0')
 	{

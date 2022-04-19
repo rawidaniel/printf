@@ -27,7 +27,7 @@ int get_sign(char s, sign_t *f)
 	case '#':
 		f->hash = 1;
 		i = 1;
-		breack;
+		break;
 	}
 	return (i);
 
