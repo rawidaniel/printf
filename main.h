@@ -31,6 +31,9 @@ int print_octal(va_list l);
 int print_hex(va_list l);
 /*print hexadecimal in uppercase */
 int print_hex_big(va_list l);
+/*print non printable characters*/
+int print_bigS(va_list l);
+
 /**
  * struct format - a struct of format
  * @l: format checker
@@ -44,5 +47,12 @@ typedef struct format
 } Data;
 
 
+/**
+ * struct flags - struct containing flags to "turn on"
+ * when a flag specifier is passed to _printf()
+ * @plus: flag for the '+' character
+ * @space: flag for the ' ' character
+ * @hash: flag for the '#' character
+ */
 
 #endif

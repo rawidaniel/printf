@@ -41,5 +41,7 @@ int main(void)
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
 	_printf("%b\n", 98);
+	printf("[%S]\n", "Best\nSchool");
+	_printf("[%S]\n", "Best\nSchool");
 	return (0);
 }
