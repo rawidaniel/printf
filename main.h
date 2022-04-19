@@ -19,7 +19,8 @@ int print_string(va_list valist);
 int print_int(va_list valist);
 void print_number(int n);
 int number_count(int n);
-
+/* print string */
+int _puts(char *str);
 /**
  * struct format - a struct of format
  * @l: format checker
