@@ -22,7 +22,10 @@ int print_rot13(va_list valist)
 			for (j = 0; j < 52; j++)
 			{
 				if (str[i] == rot13[j])
+				{
 					print_out(ROT13[j]);
+					break;
+				}
 			}
 		}
 	}
