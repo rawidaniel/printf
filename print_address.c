@@ -14,7 +14,7 @@ int print_address(va_list valist)
 	count = 0;
 	p = va_arg(valist, unsigned long int);
 	if (!p)
-		return (_puts("(null)"));
+		return (_puts("(nil)"));
 	str = itoa(p, 16, 1);
 	count += _puts("0x");
 	count += _puts(str);
