@@ -22,11 +22,11 @@ int print_bigS(va_list l)
 		if (s[i] > 0 && (s[i] < 32 || s[i] >= 127))
 		{
 			print_out('\\');
-			print_out('X');
+			print_out('x');
 			count += 2;
 			res = itoa(s[i], 16, 0);
 			if (!res[1])
-				count += print_out('0');
+				count += print_out(48);
 			count += _puts(res);
 		}
 		else
