@@ -1,0 +1,76 @@
+.TH man 3 "19 April 2022" "ALX SCHOOL" "_printf man page"
+.SH NAME
+.B _printf
+- Formatted output conversion.
+.SH SYNOPSIS
+.B #include "main.h"
+.B int _printf(const char *
+.I format
+.B ,...)
+.SH DESCRIPTION
+.B _printf()
+Prints to standard output under the control of a
+.I format
+string that specifies how subsequent arguments are converted for output.
+.SH Return value
+.TP
+On success, _printf returns the number of characters printed. If
+.I format
+is NULL or if the functions encounters any errors, it returns -1.
+.TP
+.B Format of the format string
+.TP
+he format string can contain any characters, just like a regular string, in double quotes, which will be printed as is. For example, _printf(\(dqHello\(dq) will print: Hello.
+However, this format string can contain
+.I conversion specifiers.
+These start with a %, and are followed with a character (see
+.I conversion specifiers
+). Special characters like a new line are escaped, for example _printf(\(dq\\n\(dq) will print a new line.
+.B Conversion specifiers
+TP
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+.TP
+.BR c
+The int argument is converted to an unsigned char, then the resulting character is written
+.TP
+.B s
+The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte.
+.TP
+.B S
+Prints a string. Non printable characters are printed as "\x" followed by their ASCII values in two digit hexadecimal
+.TP
+.B d, i
+The int argument is converted to signed decimal notation.
+.TP
+.B x, X
+The unsigned int argument is converted to unsigned lowercase hexadecimal notation(x), or unsigned uppercase hexadecimal notation(X).
+.TP
+.B u
+The unsigned int argument is converted to unsigned decimal notation
+.TP
+.B o, b
+The unsigned int argument is converted to unsigned octal notation(o) or binary notation(b).
+.TP
+.B p
+Address is printed in hexadecimal.
+.TP
+.B r
+Prints a string in reverse.
+.TP
+.B R
+Prints a string converted to rot13
+.TP
+.B %
+A '%' is written but no argument is converted. The complete version specification is '%%'
+.SH EXAMPLE
+To print the day of the year, where weekday and month are pointers to strings and day and year are integers:
+
+#include "main.h"
+
+_printf("%s, %s %d, %d\\n", weekday, month, day, year);
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+RAWI DANIEL and ALEMENEW ENDAWEK
