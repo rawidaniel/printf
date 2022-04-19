@@ -90,6 +90,7 @@ int _printf(const char *format, ...)
 	}
 	va_start(ag, format);
 	f = print_format(format, ag);
+	print_out(-1);
 	va_end(ag);
 	return (f);
 }

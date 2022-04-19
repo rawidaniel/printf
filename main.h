@@ -10,6 +10,7 @@ int print_format(const char *format, va_list valist);
 int formatchecker(const char *str, va_list valist, int *j);
 /*print the output to stdout*/
 int print_out(char c);
+int buffer(char c);
 /*print anything*/
 int _printf(const char *format, ...);
 /*print a character and string*/
