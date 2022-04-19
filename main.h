@@ -33,7 +33,8 @@ int print_hex(va_list l);
 int print_hex_big(va_list l);
 /*print non printable characters*/
 int print_bigS(va_list l);
-
+/* print address */
+int print_address(va_list valist);
 /**
  * struct format - a struct of format
  * @l: format checker
