@@ -36,6 +36,8 @@ int print_bigS(va_list l);
 /* get_sign - turns on flags if _printf finds */
 int get_sign(char s, sign_t *f);
 
+/* print address */
+int print_address(va_list valist);
 /**
  * struct format - a struct of format
  * @l: format checker
