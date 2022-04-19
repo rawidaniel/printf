@@ -22,6 +22,14 @@ char *itoa(long int num, int base, int lowercase);
 int print_binary(va_list valist);
 /* print string */
 int _puts(char *str);
+/* print unsigned integer */
+int print_unsigned (va_list l);
+/*print octa decimal */
+int print_octal(va_list l);
+/*print hexadecimal in lowercase*/
+int print_hex(va_list l);
+/*print hexadecimal in uppercase */
+int print_hex_big(va_list l);
 /**
  * struct format - a struct of format
  * @l: format checker
