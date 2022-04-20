@@ -92,3 +92,7 @@ These are all the tasks of this project, the ones that are completed link to the
 * All the above options work well together.
 
 ---
+### Authors
+
+* **Alemenew endawek** - [alemenewendawek@gmail.com] (https://github.com/Alemenew)
+* **Rawi Daniel** - [rawidaniel96@gmail.com] (https://github.com/rawidaniel)
